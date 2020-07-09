@@ -7,14 +7,21 @@ import React, {
 } from "react";
 import { useSelector, useDispatch } from "react-redux"
 
+// import {
+//   createTotoActionCreator,
+//   editTodoActionCreator,
+//   deleteTodoActionCreator,
+//   selectTodoActionCreator,
+//   toggleTodoActionCreator
+// } from "../redux-og"
 import {
-  createTotoActionCreator,
+  createTodoActionCreator,
   editTodoActionCreator,
+  toggleTodoActionCreator,
   deleteTodoActionCreator,
-  selectTodoActionCreator,
-  toggleTodoActionCreator
-} from "../redux-og"
-import { Todo, State } from "../type"
+  selectTodoActionCreator
+} from "../redux-toolkit";
+import { State } from "../type"
 import "./App.css";
 
 const App = function() {
@@ -43,7 +50,7 @@ const App = function() {
     e.preventDefault();
     if (!newTodoInput.length) return
 
-    dispatch(createTotoActionCreator({
+    dispatch(createTodoActionCreator({
       desc: newTodoInput
     }))
     setNewTodoInput('')

@@ -1,5 +1,4 @@
 import {
-  applyMiddleware,
   configureStore,
   createSlice,
   getDefaultMiddleware,
@@ -9,7 +8,6 @@ import { v4 as uuidv4 } from "uuid"
 import logger from "redux-logger"
 
 import { Todo } from "./type"
-import {log} from "util";
 
 const todosInitialState: Todo[] = [
   {
